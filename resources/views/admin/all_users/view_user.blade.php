@@ -1,0 +1,61 @@
+@extends('layouts.admin')
+
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h3 class="mt-3">User Details</h3>
+                        <a href="{{ route('admin.all_users')}}" class="btn btn-primary pt-3">Back</a>                        
+                    </div>
+                    <hr>
+                    <div class="card-body">
+                        <div class="row">                            
+                            <div class="col-md-4 mt-3">
+                                <label for="">First Name</label>
+                                <div class="p-2 border">{{ $orders->first_name }}</div>
+                            </div>
+                            <div class="col-md-4 mt-3">
+                                <label for="">Last Name</label>
+                                <div class="p-2 border">{{ $orders->last_name }}</div>
+                            </div>
+                            <div class="col-md-4 mt-3">
+                                <label for="">Email</label>
+                                <div class="p-2 border">{{ $orders->email }}</div>
+                            </div>
+                            <div class="col-md-4 mt-3">
+                                <label for="">Phone</label>
+                                <div class="p-2 border">{{ $orders->phone }}</div>
+                            </div>
+                            <div class="col-md-4 mt-3">
+                                <label for="">Address 1</label>
+                                <div class="p-2 border">{{ $orders->address1 }}</div>
+                            </div>
+                            <div class="col-md-4 mt-3">
+                                <label for="">Address 2</label>
+                                <div class="p-2 border">{{ $orders->address2 }}</div>
+                            </div>
+                            <div class="col-md-4 mt-3">
+                                <label for="">City</label>
+                                <div class="p-2 border">{{ $orders->city }}</div>
+                            </div>
+                            <div class="col-md-4 mt-3">
+                                <label for="">State</label>
+                                <div class="p-2 border">{{ $orders->state }}</div>
+                            </div>
+                            <div class="col-md-4 mt-3">
+                                <label for="">Country</label>
+                                <div class="p-2 border">{{ $orders->country }}</div>
+                            </div>
+                            <div class="col-md-4 mt-3">
+                                <label for="">Zip Code</label>
+                                <div class="p-2 border">{{ $orders->pin_code }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
