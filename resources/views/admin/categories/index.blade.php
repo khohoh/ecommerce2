@@ -9,7 +9,7 @@
         <div class="card-body">
             <table class="table table-bordered table-striped">
                 <thead>
-                    <tr>
+                    <tr class="text-center">
                         <th>Id</th>
                         <th>Name</th>
                         <th>Description</th>
@@ -19,7 +19,7 @@
                 </thead>
                 <tbody>
                     @foreach ($categories as $category)
-                        <tr>
+                        <tr class="text-center">
                             <td>{{ $category->id }}</td>
                             <td>{{ $category->name }}</td>
                             <td>{{ $category->description }}</td>
