@@ -25,7 +25,7 @@
                                 <td>{{ $product->id }}</td>
                                 <td>{{ $product->category->name }}</td>
                                 <td>{{ $product->name }}</td>
-                                <td>{{ $product->selling_price }}</td>
+                                <td>$ {{ $product->selling_price }}</td>
                                 <td>
                                     <img src="/storage/{{ $product->image }}" class="category-image" alt="Image">
                                 </td>
