@@ -27,8 +27,8 @@
                         </h2>
 
                         <hr>
-                        <label class="me-3">Original Price : <s>Rs {{ $selected_product->original_price }}</s></label>
-                        <label class="fw-bold">Selling Price : Rs {{ $selected_product->selling_price }}</label>
+                        <label class="me-3">Original Price : <s>$ {{ $selected_product->original_price }}</s></label>
+                        <label class="fw-bold">Sale Price : $ {{ $selected_product->selling_price }}</label>
                         <p class="mt-3">
                             {!! $selected_product->short_description !!}
                         </p>
