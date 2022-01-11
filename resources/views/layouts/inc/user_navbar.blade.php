@@ -40,13 +40,9 @@
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         @if(auth()->user()->role_as == 1)                    
-                        <a href="{{ route('admin.index') }}" class="dropdown-item">
-                          Dashboard
-                        </a>
-                        @else
-                        <a href="" class="dropdown-item">
-                          My Profile
-                        </a>
+                          <a href="{{ route('admin.index') }}" class="dropdown-item">
+                            Dashboard
+                          </a>                        
                         @endif
                         
                         <a href="{{ route('user.my_orders') }}" class="dropdown-item">
