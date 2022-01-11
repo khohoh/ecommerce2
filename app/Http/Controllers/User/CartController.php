@@ -10,6 +10,7 @@ use App\Models\Cart;
 
 class CartController extends Controller
 {
+    
     public function viewCart()
     {
         $cart_items = Cart::where('user_id', auth()->user()->id)->get();
@@ -40,8 +41,8 @@ class CartController extends Controller
             }
         }
         else {
-            return response()->json(['status' => 'Please Login to Continue']);
-        }
+            return response()->json(['status' => 'Please Login first with [admin@admin.com] PW:123456789']);            
+        }        
     }
 
 

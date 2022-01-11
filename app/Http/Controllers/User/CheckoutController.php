@@ -29,6 +29,19 @@ class CheckoutController extends Controller
 
     public function placeOrder(Request $request)
     {
+        $this->validate($request, [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'address1' => 'required',
+            'address2' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'country' => 'required',
+            'pin_code' => 'required',
+        ]);
+
         $order = new Order();
         $order->user_id = auth()->user()->id;
         $order->first_name = $request->first_name;

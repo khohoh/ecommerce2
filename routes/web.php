@@ -19,10 +19,12 @@ Route::get('/category', [UserHomeController::class, 'category'])->name('user.cat
 Route::get('/view_category/{category:slug}', [UserHomeController::class, 'viewCategory'])->name('user.view_category');
 Route::get('/view_product/{category_slug}/{product_slug}', [UserHomeController::class, 'viewProduct']);
 
+Route::post('/add_to_cart', [CartController::class, 'addProduct']);
+
 Route::middleware(['auth'])->group(function ()
 {
     Route::get('/cart', [CartController::class, 'viewCart'])->name('user.view_cart');
-    Route::post('/add_to_cart', [CartController::class, 'addProduct']);
+    // Route::post('/add_to_cart', [CartController::class, 'addProduct']);
     Route::post('/update_cart', [CartController::class, 'updateCart']);
     Route::post('/delete_cart_item', [CartController::class, 'deleteCart']);
     Route::get('/checkout', [CheckoutController::class, 'index'])->name('user.checkout');
